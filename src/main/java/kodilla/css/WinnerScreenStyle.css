@@ -1,0 +1,20 @@
+.label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #0DA192;
+}
+.background {
+    -fx-background-color: #14bdac;
+    -fx-background-insets: 100px 0 50px 0;
+}
+
+#X {
+    -fx-font-size: 124px;
+}
+
+#O {
+    -fx-font-size: 124px;
+}
+
+#win {
+    -fx-font-size: 50px;
+}

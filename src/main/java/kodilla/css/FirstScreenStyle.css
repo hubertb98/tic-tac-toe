@@ -1,0 +1,22 @@
+#main {
+    -fx-background-color: #14bdac;
+    -fx-background-insets: 100px 0 50px 0;
+}
+
+.button {
+    -fx-pref-height: 120px;
+    -fx-pref-width: 120px;
+    -fx-end-margin: 30px;
+    -fx-background-color: #f5f6fa;
+    -fx-background-radius: 30px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #dcdde1;
+    -fx-pref-width: 130px;
+    -fx-pref-height: 130px;
+    -fx-translate-x: -5px;
+    -fx-translate-y: -5px;
+    -fx-font-size: 22px;
+}

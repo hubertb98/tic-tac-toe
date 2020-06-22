@@ -1,0 +1,83 @@
+.background {
+    -fx-background-color: #ffffff;
+}
+.button {
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+    -fx-background-color: #ffffff;
+}
+
+#buttons {
+    -fx-font-weight: bold;
+    -fx-font-size: 36px;
+    -fx-cursor: hand;
+}
+
+#players {
+    -fx-effect: dropshadow(three-pass-box, #14bdac, 0, 2.0, 0, 2);
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+#newGameButton {
+    -fx-cursor: hand;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+#newGameButton:hover {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.separator *.line {
+    -fx-background-color: #0DA192;
+    -fx-border-color: #0DA192;
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+}
+
+#horizontalSeparator *.line {
+    -fx-padding: 4;
+}
+
+#verticalSeparator *.line {
+    -fx-padding: 1;
+}
+
+#verticalSeparator {
+    -fx-translate-x: -6.5px;
+}
+
+#horizontalSeparator {
+    -fx-translate-y: -0.5px;
+}
+
+.menu {
+    -fx-border-radius: 25px;
+    -fx-background-radius: 25px;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #bdc3c7;
+    -fx-cursor: hand;
+}
+
+.menu-item:focused {
+    -fx-background-color: #bdc3c7;
+    -fx-cursor: hand;
+}
+
+.menu-item .label {
+    -fx-padding: 0px 25px 0px 0px;
+    -fx-text-fill: black;
+    -fx-background-color: none;
+}
+
+#label {
+    -fx-font-weight: bold;
+    -fx-font-size: 30px;
+}
+
+#playerPoints {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
