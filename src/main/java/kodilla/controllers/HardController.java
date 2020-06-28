@@ -341,7 +341,6 @@ public class HardController {
     private void loadFromRanking() {
         try {
             Player[] users = new Gson().fromJson(new FileReader("D:\\Development\\Projects\\tic-tac-toe\\src\\main\\resources\\ranking.json"), Player[].class);
-            System.out.println(users);
             player = users[0];
             computer = users[1];
         } catch (Exception e) {

@@ -1,12 +1,17 @@
 package kodilla.controllers;
 
 import com.google.gson.Gson;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.MenuItem;
 import javafx.scene.layout.GridPane;
 import javafx.scene.shape.Line;
+import javafx.stage.Stage;
 import kodilla.Computer;
 import kodilla.Human;
 import kodilla.Player;
@@ -258,8 +263,9 @@ public class EasyController {
 
             line.setEndY(button2.getLayoutY() + 170);
 
-//            line.setTranslateY(button1.getLayoutY() + 90);
-//            line.setTranslateX(button2.getLayoutX() + 45);
+            line.setTranslateY(button1.getLayoutY() + 90);
+            line.setTranslateX(button2.getLayoutX() + 45);
+
         }
 
         if (Direction.DIAGONAL.equals(direction)) {
@@ -271,8 +277,9 @@ public class EasyController {
 
             line.setEndY(button2.getLayoutY() + 90);
 
-//            line.setTranslateY(button1.getLayoutY() + 90);
-//            line.setTranslateX(button1.getLayoutX() + 45);
+            line.setTranslateY(button1.getLayoutY() + 90);
+            line.setTranslateX(button1.getLayoutX() + 45);
+
         }
 
         if (Direction.ANTIDIAGONAL.equals(direction)) {
@@ -283,6 +290,7 @@ public class EasyController {
             line.setEndX(button2.getLayoutX() + 90);
 
             line.setEndY(button2.getLayoutY() + 90);
+
         }
 
         grid.getChildren().remove(line);
@@ -316,7 +324,6 @@ public class EasyController {
     private void loadFromRanking() {
         try {
             Player[] users = new Gson().fromJson(new FileReader("D:\\Development\\Projects\\tic-tac-toe\\src\\main\\resources\\ranking.json"), Player[].class);
-            System.out.println(users);
             player = users[0];
             computer = users[1];
         } catch (Exception e) {
