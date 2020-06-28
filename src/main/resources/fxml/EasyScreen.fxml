@@ -1,134 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0"
-      prefWidth="700.0" styleClass="background" stylesheets="@../css/MainScreenStyle.css"
-      xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="kodilla.controllers.EasyController">
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" styleClass="background" stylesheets="@../css/MainScreenStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kodilla.controllers.EasyController">
     <children>
         <Pane layoutY="100.0" prefHeight="300.0" prefWidth="700.0" style="-fx-background-color: #14bdac;">
             <children>
-                <GridPane fx:id="grid" hgap="5.0" layoutX="200.0" layoutY="15.0" maxHeight="-Infinity"
-                          maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="270.0"
-                          prefWidth="300.0"
-                          style="-fx-background-color: #14bdac; -fx-grid-lines-visible: false; -fx-border-insets: 0; -fx-border-style: none;"
-                          vgap="5.0">
+                <GridPane fx:id="grid" hgap="5.0" layoutX="200.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="270.0" prefWidth="300.0" style="-fx-background-color: #14bdac; -fx-grid-lines-visible: false; -fx-border-insets: 0; -fx-border-style: none;" vgap="5.0">
                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0"/>
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0"/>
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
                     </columnConstraints>
                     <rowConstraints>
-                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES"/>
-                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES"/>
-                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <padding>
-                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0"/>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                     </padding>
                     <children>
-                        <Separator id="verticalSeparator" layoutX="112.0" layoutY="11.0" orientation="VERTICAL"
-                                   prefHeight="200.0" prefWidth="5.0" GridPane.columnIndex="2"
-                                   GridPane.rowSpan="2147483647">
+                        <Separator id="verticalSeparator" layoutX="112.0" layoutY="11.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="5.0" GridPane.columnIndex="2" GridPane.rowSpan="2147483647">
                             <GridPane.margin>
-                                <Insets/>
+                                <Insets />
                             </GridPane.margin>
                         </Separator>
-                        <Separator id="verticalSeparator" orientation="VERTICAL" prefHeight="200.0" prefWidth="5.0"
-                                   GridPane.columnIndex="1" GridPane.rowSpan="2147483647"/>
-                        <Button id="buttons" fx:id="button8" maxHeight="-Infinity" maxWidth="-Infinity"
-                                minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="85.0"
-                                prefWidth="95.0" style="-fx-background-color: none;" GridPane.columnIndex="1"
-                                GridPane.rowIndex="2">
+                        <Separator id="verticalSeparator" orientation="VERTICAL" prefHeight="200.0" prefWidth="5.0" GridPane.columnIndex="1" GridPane.rowSpan="2147483647" />
+                        <Button id="buttons" fx:id="button8" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="85.0" prefWidth="95.0" style="-fx-background-color: none;" GridPane.columnIndex="1" GridPane.rowIndex="2">
                         </Button>
-                        <Button id="buttons" fx:id="button2" maxHeight="-Infinity" maxWidth="-Infinity"
-                                minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="85.0"
-                                prefWidth="95.0" style="-fx-background-color: none;" GridPane.columnIndex="1">
+                        <Button id="buttons" fx:id="button2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="85.0" prefWidth="95.0" style="-fx-background-color: none;" GridPane.columnIndex="1">
                         </Button>
-                        <Button id="buttons" fx:id="button7" maxHeight="-Infinity" maxWidth="-Infinity"
-                                minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="85.0"
-                                prefWidth="95.0" style="-fx-background-color: none;" GridPane.rowIndex="2">
+                        <Button id="buttons" fx:id="button7" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="85.0" prefWidth="95.0" style="-fx-background-color: none;" GridPane.rowIndex="2">
                         </Button>
-                        <Button id="buttons" fx:id="button5" maxHeight="-Infinity" maxWidth="-Infinity"
-                                minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="85.0"
-                                prefWidth="95.0" style="-fx-background-color: none;" GridPane.columnIndex="1"
-                                GridPane.rowIndex="1">
+                        <Button id="buttons" fx:id="button5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="85.0" prefWidth="95.0" style="-fx-background-color: none;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                         </Button>
-                        <Button id="buttons" fx:id="button6" maxHeight="-Infinity" maxWidth="-Infinity"
-                                minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="85.0"
-                                prefWidth="95.0" style="-fx-background-color: none;" GridPane.columnIndex="2"
-                                GridPane.rowIndex="1">
+                        <Button id="buttons" fx:id="button6" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="85.0" prefWidth="95.0" style="-fx-background-color: none;" GridPane.columnIndex="2" GridPane.rowIndex="1">
                         </Button>
-                        <Button id="buttons" fx:id="button3" maxHeight="-Infinity" maxWidth="-Infinity"
-                                minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="85.0"
-                                prefWidth="95.0" style="-fx-background-color: none;" GridPane.columnIndex="2">
+                        <Button id="buttons" fx:id="button3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="85.0" prefWidth="95.0" style="-fx-background-color: none;" GridPane.columnIndex="2">
                         </Button>
-                        <Button id="buttons" fx:id="button9" maxHeight="-Infinity" maxWidth="-Infinity"
-                                minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="85.0"
-                                prefWidth="95.0" style="-fx-background-color: none;" GridPane.columnIndex="2"
-                                GridPane.rowIndex="2">
+                        <Button id="buttons" fx:id="button9" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="85.0" prefWidth="95.0" style="-fx-background-color: none;" GridPane.columnIndex="2" GridPane.rowIndex="2">
                         </Button>
-                        <Button id="buttons" fx:id="button1" maxHeight="-Infinity" maxWidth="-Infinity"
-                                minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="85.0"
-                                prefWidth="95.0" style="-fx-background-color: none;">
+                        <Button id="buttons" fx:id="button1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="85.0" prefWidth="95.0" style="-fx-background-color: none;">
                         </Button>
-                        <Button id="buttons" fx:id="button4" maxHeight="-Infinity" maxWidth="-Infinity"
-                                minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="85.0"
-                                prefWidth="95.0" style="-fx-background-color: none;" GridPane.rowIndex="1">
+                        <Button id="buttons" fx:id="button4" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="85.0" prefWidth="95.0" style="-fx-background-color: none;" GridPane.rowIndex="1">
                         </Button>
-                        <Separator id="horizontalSeparator" minHeight="-Infinity" prefHeight="10.0" prefWidth="298.0"
-                                   GridPane.columnSpan="2147483647">
+                        <Separator id="horizontalSeparator" minHeight="-Infinity" prefHeight="10.0" prefWidth="298.0" GridPane.columnSpan="2147483647">
                             <GridPane.margin>
-                                <Insets top="92.0"/>
+                                <Insets top="92.0" />
                             </GridPane.margin>
                         </Separator>
-                        <Separator id="horizontalSeparator" layoutX="11.0" layoutY="99.0" prefHeight="10.0"
-                                   prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
+                        <Separator id="horizontalSeparator" layoutX="11.0" layoutY="99.0" prefHeight="10.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
                             <GridPane.margin>
-                                <Insets top="-90.0"/>
+                                <Insets top="-90.0" />
                             </GridPane.margin>
                         </Separator>
                     </children>
                 </GridPane>
             </children>
         </Pane>
-        <Button id="players" alignment="TOP_LEFT" layoutX="365.0" layoutY="25.0" minHeight="-Infinity"
-                mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" style="-fx-border-color: #bdc3c7;"
-                textAlignment="CENTER">
+        <Button id="players" alignment="TOP_LEFT" layoutX="365.0" layoutY="25.0" minHeight="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" style="-fx-border-color: #bdc3c7;" textAlignment="CENTER">
         </Button>
-        <Button id="players" alignment="TOP_LEFT" layoutX="175.0" layoutY="25.0" minHeight="-Infinity"
-                mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" style="-fx-border-color: #bdc3c7;"
-                textAlignment="CENTER">
+        <Button id="players" alignment="TOP_LEFT" layoutX="175.0" layoutY="25.0" minHeight="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" style="-fx-border-color: #bdc3c7;" textAlignment="CENTER">
         </Button>
-        <Button id="playerPoints" fx:id="playerOPoints" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="425.0"
-                layoutY="25.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0"
-                style="-fx-background-color: none;" text="-">
+        <Button id="playerPoints" fx:id="playerOPoints" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="425.0" layoutY="25.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: none;" text="-">
         </Button>
-        <Button id="playerPoints" fx:id="playerXPoints" alignment="CENTER_RIGHT" contentDisplay="BOTTOM" layoutX="234.0"
-                layoutY="25.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0"
-                style="-fx-background-color: none;" text="-">
+        <Button id="playerPoints" fx:id="playerXPoints" alignment="CENTER_RIGHT" contentDisplay="BOTTOM" layoutX="234.0" layoutY="25.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: none;" text="-">
         </Button>
         <Label id="label" layoutX="185.0" layoutY="27.0" prefHeight="35.0" prefWidth="16.0" text="X">
         </Label>
         <Label id="label" layoutX="375.0" layoutY="27.0" prefHeight="35.0" prefWidth="16.0" text="O">
         </Label>
-        <Button id="newGameButton" fx:id="newGame" layoutY="400.0" mnemonicParsing="false" prefHeight="50.0"
-                prefWidth="700.0" style="-fx-background-color: none;" text="ZACZNIJ OD NOWA">
+        <Button id="newGameButton" fx:id="newGame" layoutY="400.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="700.0" style="-fx-background-color: none;" text="ZACZNIJ OD NOWA">
         </Button>
-        <MenuButton layoutX="14.0" layoutY="14.0" mnemonicParsing="false" styleClass="menu" text="Difficulty">
-            <items>
-                <MenuItem mnemonicParsing="false" text="Easy"/>
-                <MenuItem fx:id="hard" mnemonicParsing="false" text="Hard">
-                    <graphic>
-                        <fx:include source="HardScreen.fxml"/>
-                    </graphic>
-                </MenuItem>
-            </items>
-            <padding>
-                <Insets top="-1.0"/>
-            </padding>
-        </MenuButton>
+      <Button id="level" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" text="Hard" />
     </children>
 </Pane>

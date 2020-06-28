@@ -1,6 +1,7 @@
 .background {
     -fx-background-color: #ffffff;
 }
+
 .button {
     -fx-border-radius: 30px;
     -fx-background-radius: 30px;
@@ -80,4 +81,12 @@
 #playerPoints {
     -fx-font-size: 24px;
     -fx-font-weight: bold;
+}
+
+#level {
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 2px;
+    -fx-padding: 5 15 5 15;
+    -fx-font-weight: 700;
+    -fx-cursor: hand;
 }
