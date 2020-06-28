@@ -14,14 +14,18 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fxml/EasyScreen.fxml"));
+        FXMLLoader easyLoader = new FXMLLoader(this.getClass().getResource("/fxml/EasyScreen.fxml"));
+        FXMLLoader hardLoader = new FXMLLoader(this.getClass().getResource("/fxml/HardScreen.fxml"));
 
 
-        Pane pane = loader.load();
-        Scene scene = new Scene(pane);
+        Pane easyPane = easyLoader.load();
+        Pane hardPane = hardLoader.load();
+
+        Scene scene1 = new Scene(easyPane);
+        Scene scene2 = new Scene(hardPane);
 
         primaryStage.setTitle("Tic Tac Toe");
-        primaryStage.setScene(scene);
+        primaryStage.setScene(scene1);
         primaryStage.show();
     }
 }

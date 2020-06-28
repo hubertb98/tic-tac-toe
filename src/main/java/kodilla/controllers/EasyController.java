@@ -22,7 +22,6 @@ public class EasyController {
     Player computer = new Computer(CPU_NAME, 0);
     Line line = new Line();
     Gson gson = new Gson();
-    File file = new File("ranking.json");
     private boolean turnX = true;
     private boolean playable = true;
     private Button[] buttons;
@@ -55,8 +54,6 @@ public class EasyController {
     private Button playerXPoints;
     @FXML
     private Button playerOPoints;
-    @FXML
-    private MenuItem hard;
 
 
     @FXML
@@ -78,11 +75,6 @@ public class EasyController {
         setButtonsAction();
         getPlayerXPoints();
         getPlayerOPoints();
-
-//        newGame.setOnMouseClicked(event -> {
-//            clearButtons();
-//            turnX = true;
-//        });
     }
 
     private void startNewGame() {
