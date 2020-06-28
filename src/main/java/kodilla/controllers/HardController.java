@@ -1,25 +1,24 @@
 package kodilla.controllers;
 
-import kodilla.Computer;
-import kodilla.Human;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.GridPane;
 import javafx.scene.shape.Line;
+import kodilla.Computer;
+import kodilla.Human;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class HardController {
 
-    Human player = new Human();
-    Computer computer = new Computer();
+    Human player = new Human("Player", 0);
+    Computer computer = new Computer("CPU", 0);
     Line line = new Line();
     private boolean turnX = true;
     private boolean playable = true;
@@ -185,7 +184,7 @@ public class HardController {
         }
         // horizontal
         for (int i = 0; i < 4; i++) {
-            int startIndex = i*4;
+            int startIndex = i * 4;
             int endIndex = startIndex + 4;
             List<String> buttonsText = IntStream.range(startIndex, endIndex)
                     .mapToObj(index -> buttons[index].getText())
@@ -201,7 +200,7 @@ public class HardController {
                     computer.addPoints();
                 }
                 playable = false;
-                winAnimation(buttons[i+3], buttons[i], Direction.HORIZONTAL);
+                winAnimation(buttons[i + 3], buttons[i], Direction.HORIZONTAL);
                 break;
             }
         }
@@ -212,6 +211,7 @@ public class HardController {
         buttonsText.add(buttons[5].getText());
         buttonsText.add(buttons[10].getText());
         buttonsText.add(buttons[15].getText());
+
         long xCount = buttonsText.stream().filter("X"::equals).count();
         long oCount = buttonsText.stream().filter("O"::equals).count();
 
@@ -231,6 +231,7 @@ public class HardController {
         buttonsText1.add(buttons[6].getText());
         buttonsText1.add(buttons[9].getText());
         buttonsText1.add(buttons[12].getText());
+
         xCount = buttonsText1.stream().filter("X"::equals).count();
         oCount = buttonsText1.stream().filter("O"::equals).count();
 

@@ -1,23 +1,28 @@
 package kodilla.controllers;
 
-import kodilla.Computer;
-import kodilla.Human;
+import com.google.gson.Gson;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.GridPane;
 import javafx.scene.shape.Line;
+import kodilla.Computer;
+import kodilla.Human;
+import kodilla.Player;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.io.*;
+import java.util.*;
 
 public class EasyController {
 
-    Human player = new Human();
-    Computer computer = new Computer();
+    private final static String PLAYER_NAME = "Player";
+    private final static String CPU_NAME = "CPU";
+    Player player = new Human(PLAYER_NAME, 0);
+    Player computer = new Computer(CPU_NAME, 0);
     Line line = new Line();
+    Gson gson = new Gson();
+    File file = new File("ranking.json");
     private boolean turnX = true;
     private boolean playable = true;
     private Button[] buttons;
@@ -68,13 +73,27 @@ public class EasyController {
         buttons[7] = button8;
         buttons[8] = button9;
 
+        startNewGame();
+        loadFromRanking();
         setButtonsAction();
         getPlayerXPoints();
         getPlayerOPoints();
 
+//        newGame.setOnMouseClicked(event -> {
+//            clearButtons();
+//            turnX = true;
+//        });
+    }
+
+    private void startNewGame() {
         newGame.setOnMouseClicked(event -> {
             clearButtons();
             turnX = true;
+            player = new Human(PLAYER_NAME,0);
+            computer = new Computer(CPU_NAME, 0);
+            saveToRanking();
+            getPlayerXPoints();
+            getPlayerOPoints();
         });
     }
 
@@ -110,6 +129,7 @@ public class EasyController {
         alert.setContentText("You win!");
 
         alert.showAndWait();
+        saveToRanking();
         playable = true;
     }
 
@@ -188,6 +208,7 @@ public class EasyController {
         buttonsText.add(buttons[0].getText());
         buttonsText.add(buttons[4].getText());
         buttonsText.add(buttons[8].getText());
+
         long xCount = buttonsText.stream().filter("X"::equals).count();
         long oCount = buttonsText.stream().filter("O"::equals).count();
 
@@ -202,10 +223,12 @@ public class EasyController {
             winAnimation(buttons[0], buttons[8], Direction.DIAGONAL);
             return;
         }
+
         List<String> buttonsText1 = new ArrayList<>();
         buttonsText1.add(buttons[2].getText());
         buttonsText1.add(buttons[4].getText());
         buttonsText1.add(buttons[6].getText());
+
         xCount = buttonsText1.stream().filter("X"::equals).count();
         oCount = buttonsText1.stream().filter("O"::equals).count();
 
@@ -282,5 +305,30 @@ public class EasyController {
 
     private void getPlayerOPoints() {
         playerOPoints.setText(computer.getPoints());
+    }
+
+    private void saveToRanking() {
+        Player[] users = new Player[]{player, computer};
+
+        try {
+            Writer writer = new FileWriter("D:\\Development\\Projects\\tic-tac-toe\\src\\main\\resources\\ranking.json");
+
+            new Gson().toJson(users, writer);
+            writer.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void loadFromRanking() {
+        try {
+            Player[] users = new Gson().fromJson(new FileReader("D:\\Development\\Projects\\tic-tac-toe\\src\\main\\resources\\ranking.json"), Player[].class);
+            System.out.println(users);
+            player = users[0];
+            computer = users[1];
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
