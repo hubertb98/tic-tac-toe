@@ -1,15 +1,11 @@
 package kodilla;
 
-public class Human  implements Player{
-    private int points = 0;
+public class Human  extends Player{
 
-    public int addPoints() {
-        points++;
-        return points;
+
+    public Human(String name, int points) {
+        super(points, name);
     }
 
-    public String getPoints() {
-        return "" + points;
-    }
 
 }

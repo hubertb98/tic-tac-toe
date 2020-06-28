@@ -1,14 +1,8 @@
 package kodilla;
 
-public class Computer implements Player{
-    private int points = 0;
+public class Computer extends Player{
 
-    public int addPoints() {
-        points++;
-        return points;
-    }
-
-    public String getPoints() {
-        return "" + points;
+    public Computer(String name, int points) {
+        super(points, name);
     }
 }
